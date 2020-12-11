@@ -2,7 +2,7 @@ with import <nixpkgs> {};
 mkShell {
   name = "local-postgresql";
   buildInputs = [
-        (pkgs.postgresql.withPackages (p: [ p.postgis ]))
+    (postgresql_12.withPackages (p: [ p.postgis ]))
     ];
 
    shellHook = ''
